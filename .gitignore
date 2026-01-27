@@ -1,0 +1,31 @@
+# File temporanei
+*.log
+*.tmp
+*.swp
+
+# File compilati
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# File di CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Cartelle di build / output
+/build/
+/bin/
+/Debug/
+/Release/
+
+#ambiente
+_notes/
+.vscode/
+
