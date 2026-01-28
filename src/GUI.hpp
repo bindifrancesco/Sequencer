@@ -3,6 +3,9 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include "DummyEngine.hpp"
+#include <functional>
+#include <map>
+
 
 class GUI {
 public:
@@ -10,6 +13,8 @@ public:
     ~GUI();
     void drawScene(const Scene& scene, int cursorStep);
     void handleEvent(SDL_Event& e, int& cursorStep, Scene& scene);
+    void drawGridForTrack(const Track& track, int yStart, int yEnd);
+
 
 private:
     SDL_Window* window;
@@ -22,6 +27,7 @@ private:
     bool fullScreen = false;
     int windowedWidth  = 900;
     int windowedHeight = 500;
+    std::map<SDL_Keycode, std::function<void()>> keyBindings;
 };
 
 
